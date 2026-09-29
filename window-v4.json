@@ -1,0 +1,223 @@
+{
+  "window": "v4",
+  "createdAt": "2026-09-29T16:50:50+00:00",
+  "network": "GenLayer testnet Bradbury (chain 4221)",
+  "metric": "first-attempt acceptance, METRICAS v5: the tx reaches ACCEPTED with no retry, and no LEADER_TIMEOUT or VALIDATORS_TIMEOUT appears in its polled timeline (1 s polling)",
+  "plannedSample": {
+    "txPerContract": 50,
+    "contracts": [
+      "wizard",
+      "company",
+      "dvB"
+    ],
+    "control": "dvA (no LLM, not predicted)"
+  },
+  "criterion": "judged on the primary model only: across the 15 contract-window pairs of windows 2-6, the predicted first-attempt rate lies inside the 95% Clopper-Pearson interval of the measured rate in at least 12 pairs, and its mean absolute error is lower than that of the naive prediction",
+  "model": {
+    "version": "c-1",
+    "primary": {
+      "variant": "C",
+      "description": "operator TIMEOUT, DV and leader-timeout rates from the previous window (LLM contracts pooled, 3 pseudo-votes at the rate of the other operators); DV scaled per contract; 'all validators against the leader' DV as an attempt-level event per contract; content disagreement per contract; committees drawn without replacement with probability proportional to (0.6 self stake + 0.4 delegated stake)^0.5"
+    },
+    "secondary": {
+      "variant": "B",
+      "note": "reference only, not judged",
+      "description": "as C, but every DV vote is an independent per-validator event"
+    },
+    "fitWindows": [
+      "v1",
+      "v2",
+      "v3"
+    ],
+    "simulator": {
+      "method": "Monte Carlo",
+      "seed": 20260928,
+      "seedPerContract": "20260928-<contract>",
+      "samples": 200000,
+      "maxAttempts": 4,
+      "python": "3.12.10"
+    }
+  },
+  "networkSnapshot": {
+    "campaign": "prereg-v4",
+    "label": "prereg",
+    "takenAt": "2026-09-29T16:50:20.892Z",
+    "epoch": "166",
+    "eligibleCount": 27,
+    "sha256": "4effde0bdf7ab7d5b7084003fd8028df5556400e347bae3bf36a00bfc638798d",
+    "eligible": [
+      {
+        "address": "0x59dC5E6fD7428c5Ee6fc24aE2B99E5860A9c9499",
+        "weight": 160.5579970794645
+      },
+      {
+        "address": "0x7c23E70217AB2A9E777940Eb769bA4198d1BaA61",
+        "weight": 164.05381474220718
+      },
+      {
+        "address": "0x58a7b7ac6Cb01843e4e5af117C551E59449E0F49",
+        "weight": 184.644788630332
+      },
+      {
+        "address": "0x470AAa7DE37ff3E1C2b38eD9096263ca0d541F21",
+        "weight": 190.26999882618517
+      },
+      {
+        "address": "0x2d012a292244C7ce6423a114d19109990923Af76",
+        "weight": 204.6344500588529
+      },
+      {
+        "address": "0x96298d411a2D622945BEACa6112374583b501d52",
+        "weight": 211.99834647234164
+      },
+      {
+        "address": "0xfd811B16001077243e07173ec72a4735FF04C3AA",
+        "weight": 209.4679458761206
+      },
+      {
+        "address": "0x79485eF57aC2055dC83b9E7b2C9Cf184Fc79648E",
+        "weight": 214.1552632432716
+      },
+      {
+        "address": "0xA58D6FcCD69eaafB5869dA58913f116045D75444",
+        "weight": 218.4324039848471
+      },
+      {
+        "address": "0xa856ae1b278F030082c66Fa50A5F51F485D1F940",
+        "weight": 219.26837681138224
+      },
+      {
+        "address": "0x4Cd1ab61867487F45988dB08eb18bd00e20c518a",
+        "weight": 213.70139111557128
+      },
+      {
+        "address": "0x0c526A6af46A038E31dA21C123756Ab2D75f06Bc",
+        "weight": 225.7812751856748
+      },
+      {
+        "address": "0x8E7765267023F88d4155d52F4ce2319aDDf1dc33",
+        "weight": 227.94379398617832
+      },
+      {
+        "address": "0xE8fdefdfe18fD8E5B0d576b7CcfC5a29CE43fD7f",
+        "weight": 232.46870681633052
+      },
+      {
+        "address": "0xb4Fb7ADc6877a6A16bd131c7c9270834bD3DEf34",
+        "weight": 235.6073120952183
+      },
+      {
+        "address": "0x27276953fa2052A5178Ae5a3D114a3DFB9A2fC98",
+        "weight": 239.33794916941733
+      },
+      {
+        "address": "0x3B940A5b4A762583453D9e9Cf0981BE0426A8e79",
+        "weight": 242.9105924873668
+      },
+      {
+        "address": "0x77a07271abB443F55be19c357AA35206BeB63E1d",
+        "weight": 247.0916896080864
+      },
+      {
+        "address": "0x2CD9051E10cd1547a7b64eF61EbF1E608235dBda",
+        "weight": 240.4122630223913
+      },
+      {
+        "address": "0x9F6aa7364D20CF25F054Ea83f3CB950317fD34b6",
+        "weight": 241.4407979696226
+      },
+      {
+        "address": "0x4FC292d5D255Ec8Ad4cdcd36c5E188dfEE9D160e",
+        "weight": 254.40441189983662
+      },
+      {
+        "address": "0xB7551beF37a05995218f9a1BB7A93e5B6705f535",
+        "weight": 258.0149517920623
+      },
+      {
+        "address": "0x422357d87B035e478777C84748BAC834CE2A9597",
+        "weight": 253.0279216890579
+      },
+      {
+        "address": "0xF01877B6Ac60861CA3b134e0E483C482679b4682",
+        "weight": 259.6684426082341
+      },
+      {
+        "address": "0x9D998aD7C7f9Cc448A4DbDf49edD7CADBe3d57B6",
+        "weight": 278.59487410907747
+      },
+      {
+        "address": "0x3f5cAED686336ED9cF3Dede61154B0Cd67Fb9bD7",
+        "weight": 279.6361960839444
+      },
+      {
+        "address": "0xB93a46B843fB32E8Ce392e68eDFE93Faa4a40817",
+        "weight": 277.6159168313725
+      }
+    ]
+  },
+  "predictions": {
+    "wizard": {
+      "primary": {
+        "firstAttempt": 0.7392,
+        "withinRotations": 0.9955,
+        "leaderTimeoutFirstAttempt": 0.2335
+      },
+      "secondary": {
+        "firstAttempt": 0.7397,
+        "withinRotations": 0.9954,
+        "leaderTimeoutFirstAttempt": 0.2327
+      },
+      "naiveFirstAttempt": 0.76
+    },
+    "company": {
+      "primary": {
+        "firstAttempt": 0.3783,
+        "withinRotations": 0.8507,
+        "leaderTimeoutFirstAttempt": 0.2328
+      },
+      "secondary": {
+        "firstAttempt": 0.3316,
+        "withinRotations": 0.8017,
+        "leaderTimeoutFirstAttempt": 0.2342
+      },
+      "naiveFirstAttempt": 0.4407
+    },
+    "dvB": {
+      "primary": {
+        "firstAttempt": 0.7428,
+        "withinRotations": 0.9957,
+        "leaderTimeoutFirstAttempt": 0.2342
+      },
+      "secondary": {
+        "firstAttempt": 0.7424,
+        "withinRotations": 0.9957,
+        "leaderTimeoutFirstAttempt": 0.2343
+      },
+      "naiveFirstAttempt": 0.8533
+    }
+  },
+  "modelCode": "model/ in the same commit as this file, at the same relative paths; the code SHA-256 below are of those files. Frozen from window v2 to v6 unless a new model version is registered with its reason.",
+  "sha256": {
+    "fitData": {
+      "results/bradbury/campaign-wizard-v1.jsonl": "2ac2c1eb47061616a11c081ec5a37d17a69696d0581e9f7215fe467fe02e716e",
+      "results/bradbury/campaign-company-v1.jsonl": "2dfb4e391e5c91fe4631c058b0f0e2574a9b8bce3e5c2597b72ceb84aa871dba",
+      "results/bradbury/campaign-dvB-v1.jsonl": "5d54859e04993f575515f7d1e7a2dbf79bc58092c8c83cf1f50b9ff4ff7f735a",
+      "results/bradbury/execution-recheck-v1.jsonl": "e9434ea4afac516eee62ed96ed63c05ebf92e059cc1736ab8087e7f37b06733f",
+      "results/bradbury/campaign-wizard-v2.jsonl": "5ac03631f61e45f69a5b2db2eda9c32571b3e2ca8a8c56ed1a48fdf41dbc3972",
+      "results/bradbury/campaign-company-v2.jsonl": "7d80f929504c545ce2a3f7c2635c564eef4202359567f286f3df4669ca61785a",
+      "results/bradbury/campaign-dvB-v2.jsonl": "bf6b77889670a8145a1ad9e846e069c631f69ee0b189252703765889324e2eca",
+      "results/bradbury/campaign-wizard-v3.jsonl": "b43b22c1a295845a0ee356b639e84f0abee303fa6e03d7ad9b3870d8492f16b1",
+      "results/bradbury/campaign-company-v3.jsonl": "db06c2ba9a28b6a15f576e82d1cfee6e05b39fa4c2371fd0e7a24a47d1201a56",
+      "results/bradbury/campaign-dvB-v3.jsonl": "be24095cfb6cda655b03b299de3d90b51a90cac8205db9db8447c157c4db8fe9",
+      "results/bradbury/execution-recheck-v3.jsonl": "a2b86bbe7046655cccc109290f6d7bbf36abfbaff2aceaa00c4f099a9f53f38f"
+    },
+    "code": {
+      "scripts/predict_model.py": "a79ece7204e7ed32cbd49d8b418973b70d78e9eb14905083b38fee4fc12aadbf",
+      "scripts/network_report.py": "7b871f2f8dd817e2f714897b2b7c07847b1f73520778a6b5935c6018ce424b0c",
+      "scripts/campaign_report.py": "b766ea675e68ba136705610f5445cdf8557ee863727f3ddd6d4a9f813520cfb0",
+      "scripts/final_report.py": "31ed1270ac5770e5f67cba298b1c2ada81e2d5d60783c8c8a53a55a0e7643a80",
+      "harness/stats.py": "bd8eea7eb52ad50c9a9c6e9ee63adf24075e89a64a537a4c19e8cab960ab8fa5"
+    }
+  }
+}
