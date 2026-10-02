@@ -4,6 +4,9 @@ Pre-registered predictions for the validation of the Probe.EXE prediction model 
 (September 28-30, 2026). Every `window-<w>.json` was committed and pushed before its window was run;
 GitHub keeps the push time.
 
+The project, its code and its data: [github.com/randyparrs/Probe.EXE](https://github.com/randyparrs/Probe.EXE).
+The public page: [probe-exe.pages.dev](https://probe-exe.pages.dev).
+
 - `window-v2.json` to `window-v6.json`: predictions of first-attempt acceptance per contract (primary
   model C, judged; secondary model B and, for v3, a local-only estimate, reference only), the naive
   prediction, the network snapshot used, the simulator seed and sample count, and the SHA-256 of the
